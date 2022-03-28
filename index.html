@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Email spammer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 id="app-title" class="text-center">Email spammer</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form id="mail-form">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="smtpServer" class="form-control" id="smtpServer" placeholder="SMTP Server" value="" required>
+                    </div>
+
+                    <div class="col">
+                        <input type="text" name="smtpPort" class="form-control" id="smtpPort" placeholder="SMTP Port" value="" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="smtpLogin" class="form-control" id="smtpLogin" placeholder="SMTP Login" value="" required>
+                    </div>
+
+                    <div class="col">
+                        <input type="password" name="smtpPassword" class="form-control" id="smtpPassword" placeholder="SMTP password" value="" required>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" value="" required>
+                    </div>
+
+                    <div class="col">
+                        <input type="email" name="emailFrom" class="form-control" id="emailFrom" placeholder="Email from" value="" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <textarea name="message" class="form-control" id="message" placeholder="Message" required></textarea>
+                    </div>
+                </div>
+
+                <a id="stop" href="#" class="btn btn-danger float-end">Stop</a>
+                <button id="start" type="submit" class="btn btn-light float-end">Start</button>
+            </form>
+        </div>
+    </div>
+
+    <label>Output:</label>
+    <pre id="logs"></pre>
+</div>
+
+<script src="src/js/renderer.js"></script>
+</body>
+</html>

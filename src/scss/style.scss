@@ -1,0 +1,44 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+//@import "~bootstrap/scss/bootstrap";
+
+body {
+  color: #fff;
+  font-size: 14px;
+}
+
+#app-title {
+  padding: 15px 0;
+  border-bottom: 1px dotted #fff;
+}
+
+#mail-form {
+  padding: 20px 0;
+
+  .row {
+    margin-bottom: 20px;
+  }
+}
+
+#start {
+  margin-right: 5px;
+}
+
+input, textarea {
+  color: #fff !important;
+}
+
+#logs {
+  overflow-y: scroll;
+  max-height: 200px;
+  min-height: 200px;
+  border: 1px dotted #fff;
+
+  .success {
+    color: green;
+  }
+
+  .error {
+    color: red;
+  }
+}
