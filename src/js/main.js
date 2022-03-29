@@ -104,10 +104,10 @@ app.whenReady().then(() => {
 
 async function processLineByLine(file, win, data) {
     const transporter = nodemailer.createTransport({
-        host: data['smtpServer'],
-        port: data['smtpPort'],
+        host: data['smtpServer'].trim(),
+        port: data['smtpPort'].trim(),
         auth: {
-            user: data['smtpLogin'],
+            user: data['smtpLogin'].trim(),
             pass: data['smtpPassword'],
         },
         tls: {
@@ -130,7 +130,7 @@ async function processLineByLine(file, win, data) {
 
         try {
             await transporter.sendMail({
-                from: data['emailFrom'],
+                from: data['emailFrom'].trim(),
                 to: emailTo,
                 subject: data['subject'],
                 text: data['message'],
