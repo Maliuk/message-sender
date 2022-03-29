@@ -9,6 +9,7 @@ Send emails using SMTP account.
 
 ## Requirements:
 - node js
+- npm or yarn
 - python (for building)
 
 ## Clone repository:
