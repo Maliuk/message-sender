@@ -6,6 +6,8 @@ const fs = require('fs');
 const readline = require('readline');
 const nodemailer = require('nodemailer');
 
+//process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+
 var isStarted = false;
 
 const message = {
@@ -107,6 +109,9 @@ async function processLineByLine(file, win, data) {
         auth: {
             user: data['smtpLogin'],
             pass: data['smtpPassword'],
+        },
+        tls: {
+            rejectUnauthorized: false
         }
     });
 

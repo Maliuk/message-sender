@@ -2,8 +2,6 @@ const electron = require('electron');
 const ipc = require('electron').ipcRenderer;
 const {dialog} = require('electron');
 
-//alert(dialog);
-
 console.log("App is started");
 
 (function () {
