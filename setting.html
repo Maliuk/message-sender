@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://api.twilio.com/; object-src 'self'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <form id="settings-form">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="title text-center">SMTP Settings</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="row">
+                    <div class="col">
+                        <label for="smtpServer">SMTP Server:</label>
+                        <input type="text" name="smtpServer" class="form-control" id="smtpServer">
+                    </div>
+
+                    <div class="col">
+                        <label for="smtpPort">SMTP Port:</label>
+                        <input type="text" name="smtpPort" class="form-control" id="smtpPort">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="smtpLogin">SMTP Login:</label>
+                        <input type="text" name="smtpLogin" class="form-control" id="smtpLogin">
+                    </div>
+
+                    <div class="col">
+                        <label for="smtpPassword">SMTP password:</label>
+                        <input type="password" name="smtpPassword" class="form-control" id="smtpPassword">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="title text-center">Twilio settings (for SMS)</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="row">
+                    <div class="col">
+                        <label for="accountSid">accountSid:</label>
+                        <input type="text" name="accountSid" class="form-control" id="accountSid">
+                    </div>
+
+                    <div class="col">
+                        <label for="authToken">authToken:</label>
+                        <input type="password" name="authToken" class="form-control" id="authToken">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="phoneFrom">Phone from:</label>
+                        <input type="tel" name="phoneFrom" class="form-control" id="phoneFrom">
+                    </div>
+
+                    <div class="col"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="save-settings" type="submit" class="btn btn-success float-end">Save</button>
+    </form>
+
+</div>
+
+<script src="src/js/renderer.js"></script>
+</body>
+</html>

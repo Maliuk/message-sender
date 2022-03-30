@@ -6,21 +6,21 @@ body {
   font-size: 14px;
 }
 
-#app-title {
+#app-title, .title {
   padding: 15px 0;
   border-bottom: 1px dotted #fff;
 }
 
-#mail-form {
+[id$='-form'] {
   padding: 20px 0;
 
   .row {
     margin-bottom: 20px;
   }
-}
 
-#start {
-  margin-right: 5px;
+  .btn {
+    margin: 0 5px;
+  }
 }
 
 input, textarea {

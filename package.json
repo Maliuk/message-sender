@@ -26,6 +26,10 @@
     }
   },
   "dependencies": {
-    "nodemailer": "^6.7.3"
+    "electron-store": "^8.0.1",
+    "email-validator": "^2.0.4",
+    "nodemailer": "^6.7.3",
+    "phone": "^3.1.14",
+    "twilio": "^3.76.0"
   }
 }
