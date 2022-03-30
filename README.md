@@ -1,11 +1,16 @@
 # Email Spammer
-Send emails using SMTP account.
+Send emails/SMS to the recipients from the list in file.
 
 ![](images/screenshot.png)
 
 ## How to use:
-- fill all fields
-- click the start button, choose the file with emails. Each email should be placed at new line.
+- Fill settings. **You can use SMTP or Twilio only.**
+- Save settings
+- Fill all fields in main window
+- Click the start button, 
+- Choose the txt file with emails and phones. Each email/phone should be placed at new line. **See example file - recipients.txt**
+
+_I hope you know how to use SMTP or Twilio services ;)_
 
 ## Requirements:
 - node js
