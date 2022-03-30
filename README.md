@@ -1,4 +1,4 @@
-# Email Spammer
+# Message sender
 Send emails/SMS to the recipients from the list in file.
 
 ![](images/screenshot.png)
